@@ -34,12 +34,12 @@
         <!-- Right align -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if user.is_authenticated %}
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Post</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Groups</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Create Group</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'posts:create' %}">Post</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'groups:all' %}">Groups</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'groups:create' %}">Create Group</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'accounts:logout' %}">Log Out</a></li>
             {% else %}
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Groups</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'groups:all' %}">Groups</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'accounts:login' %}">Log In</a></li>
               <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'accounts:signup' %}">Sign Up</a></li>
             {% endif %}

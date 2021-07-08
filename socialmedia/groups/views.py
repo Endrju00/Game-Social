@@ -1,29 +1,33 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import (LoginRequiredMixin,
                                         PermissionRequiredMixin)
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.views import generic
 
-from goups.models import Group, GroupMember
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView
+
+
+from groups.models import Group, GroupMember
 from django.contrib import messages
 
 
 # Create your views here.
-class CreateGroup(LoginRequiredMixin,generic.CreateView):
-    fields = ('name', 'description')
+class CreateGroup(LoginRequiredMixin, CreateView):
     model = Group
+    fields = ['name', 'description']
 
 
 class SingleGroup(generic.DetailView):
     model = Group
 
 
-class ListGroups(generic.ListViews):
+class ListGroups(ListView):
     model = Group
 
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
 
-    def get_redirect_url(self, *args, *kwargs):
+    def get_redirect_url(self, *args, **kwargs):
         return reverse('groups:single', kwargs={'slug':self.kwargs.get('slug')})
 
     def get(self, request, *args, **kwargs):
@@ -41,7 +45,7 @@ class JoinGroup(LoginRequiredMixin, generic.RedirectView):
 
 class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
 
-    def get_redirect_url(self, *args, *kwargs):
+    def get_redirect_url(self, *args, **kwargs):
         return reverse('groups:single', kwargs={'slug':self.kwargs.get('slug')})
 
     def get(self, request, *args, **kwargs):
@@ -53,7 +57,7 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
             ).get()
 
         except models.GroupMember.DoesNotExist:
-            messages.warning(self.request=, ("Sorry, you are not in this group :("))
+            messages.warning(self.request, ("Sorry, you are not in this group :("))
         else:
             membership.delete()
             messages.success(self.request, 'You have left the group!')

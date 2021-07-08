@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.http import Http404
 from django.views import generic
-from braces-views import SelectRelatedMixin
+from braces.views import SelectRelatedMixin
 from . import models, forms
 
 from django.contrib.auth import get_user_model
@@ -59,6 +59,6 @@ class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
         queryset = super().get_queryset()
         return queryset.filter(user_id=self.request.user.id)
 
-    def delete(self, *args, **args):
+    def delete(self, *args, **kwargs):
         messages.success(self.request, 'Post Deleted.')
         return super().delete(*args, **kwargs)
