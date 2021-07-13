@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #451f5c;
+  color: #fff6ed;
+}
+
+.list-group {
+  width: 150%;
+}
+
+.list-group-item {
+  background-color: #573271;
+  color: white;
+}
+.list-group-item:hover {
+  background-color: #49265d;
+  color: white;
+}
+
+
+.badge-pill {
+  background-color: #451f5c;
+  color: white;
+}

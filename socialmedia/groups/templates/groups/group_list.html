@@ -9,8 +9,9 @@
         </a>
       </h2>
     {% endif %}
+    <br>
     <h2>Groups</h2>
-    <p>Welcome to the groups page!</p>
+    <p>Click to join and see the posts!</p>
   </div>
   {% if user.is_authenticated %}
     <a href="{% url 'groups:create' %}" class="btn btn-dark">
@@ -30,15 +31,15 @@
         <a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
           <h3 class="title list-group"></h3>
           <div class="list-group-item-text container fluid">
-            {{ group.description_html|safe }}
+            <strong>{{ group.description_html|safe }}</strong>
             <div class="row">
               <div class="col-md-4">
-                <span class="badge badge-pill badge-success">{{ group.members.count }}</span>
-                member{{ group.members.count|pluralize }}
+                <span class="badge badge-pill">{{ group.members.count }}</span>
+                Member{{ group.members.count|pluralize }}
               </div>
               <div class="col-md-4">
-                <span class="badge badge-pill badge-danger"></span>
-                post{{ group.posts.count|pluralize }}
+                <span class="badge badge-pill">{{ group.posts.count }}</span>
+                Post{{ group.posts.count|pluralize }}
               </div>
             </div>
           </div>
