@@ -43,8 +43,15 @@ body {
   color: #fff6ed;
 }
 
-
 .badge-pill {
   background-color: #451f5c;
   color: white;
+}
+
+.ref {
+  color: #ffc857;
+}
+
+.ref:hover {
+  color: #ff7d00;
 }

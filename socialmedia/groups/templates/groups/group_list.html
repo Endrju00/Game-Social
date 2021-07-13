@@ -4,7 +4,7 @@
   <div class="content">
     {% if user.is_authenticated %}
       <br><h2>Welcome Back
-        <a id="username" href="{% url 'posts:for_user' username=user.username %}">
+        <a class="ref" href="{% url 'posts:for_user' username=user.username %}">
           @{{user.username}}!
         </a>
       </h2>
@@ -24,12 +24,11 @@
 
 {% block group_content %}
   <div class="col-md-8">
-    <div class="list-group"><br>
+    <ul class="list-group"><br>
       {% for group in object_list %}
         <a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
-          <h3 class="title list-group"></h3>
+          <h3>{{ group.description_html|capfirst|safe }}</h3>
           <div class="list-group-item-text container fluid">
-            <strong>{{ group.description_html|safe }}</strong>
             <div class="row">
               <div class="col-md-4">
                 <span class="badge badge-pill">{{ group.members.count }}</span>
@@ -44,6 +43,6 @@
         </a>
       {% endfor %}
       <br>
-    </div>
+    </ul>
   </div>
 {% endblock %}
