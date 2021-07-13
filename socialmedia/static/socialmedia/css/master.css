@@ -5,6 +5,28 @@ body {
   color: #fff6ed;
 }
 
+.heading {
+  text-align: center;
+}
+
+.button {
+  background-color:#573271;
+}
+.button:hover{
+  background-color: #49265d;
+  color: #fff6ed;
+  border: 1px solid #49265d;
+}
+
+/* GROUP PAGE */
+#username {
+  color: #ffc857;
+}
+
+#username:hover {
+  color: #ff7d00;
+}
+
 .list-group {
   width: 150%;
 }
@@ -12,10 +34,13 @@ body {
 .list-group-item {
   background-color: #573271;
   color: white;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
+
 .list-group-item:hover {
   background-color: #49265d;
-  color: white;
+  color: #fff6ed;
 }
 
 
