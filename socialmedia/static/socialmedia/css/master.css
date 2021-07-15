@@ -19,13 +19,6 @@ body {
 }
 
 /* GROUP PAGE */
-#username {
-  color: #ffc857;
-}
-
-#username:hover {
-  color: #ff7d00;
-}
 
 .list-group {
   width: 150%;
