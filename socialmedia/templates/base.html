@@ -58,6 +58,16 @@
     </nav>
 
     <div class="container">
+      
+      <!-- MESSAGES -->
+      {% if messages %}
+      <div class="messages alert alert-success container" role="alert">
+          {% for message in messages %}
+              {{ message }}
+          {% endfor %}
+      </div>
+      {% endif %}
+
       {% block content %}
       {% endblock %}
     </div>
