@@ -4,7 +4,8 @@
 
 <div class="container">
   <br><h1>{{ group.name }}</h1>
-  <p>Join the group to post something!</p><br>
+  <h5 style="color: #ffc857;">{{ group.description }}</h5>
+  <p>Join the group to make it more popular!</p><br>
 
   <div class="content">
     {% if user in group.members.all %}
