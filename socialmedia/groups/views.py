@@ -27,6 +27,7 @@ class SingleGroup(generic.DetailView):
 class ListGroups(ListView):
     model = Group
 
+
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
