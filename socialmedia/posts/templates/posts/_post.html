@@ -4,11 +4,12 @@
       <h3 ><a class="ref" href="{% url 'posts:for_user' username=post.user.username %}">@{{post.user.username}}</a></h3>
         <p>{{post.message_html|safe}}</p>
 
-      <a class="ref" href="{% url 'posts:single' username=post.user.username pk=post.pk %}">
+      <a class="ref" href="{% url 'posts:single' username=post.user.username pk=post.pk %}"> Created at
         <time class="time">
           {{post.created_at}}
         </time>
-      </a>
+      </a> in the
+      <a href="{% url 'groups:single' slug=post.group.slug %}"><span class="badge badge-pill">{{ post.group.name }}</span></a>
     </div>
 
     <p style="text-align: right;">

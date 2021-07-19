@@ -24,7 +24,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = 'django-insecure-&^kps0g-3gk$ie#84-h^=i1-n13_cp*uv$yovb_jjcupf6!q6o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['game-social.herokuapp.com', '127.0.0.1']
 
