@@ -48,9 +48,6 @@ Project is created with:
 * **Home Page** 
 ![](additional/home.jpg)
 
-* **Log In** 
-![](additional/login.jpg)
-
 * **Groups**
 ![](additional/groups.jpg)
 * **Group View**
@@ -58,3 +55,6 @@ Project is created with:
 
 * **Posts**
 ![](additional/post.jpg)
+
+* **Profile**
+![](additional/user.jpg)
