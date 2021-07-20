@@ -1,8 +1,13 @@
 body {
-  margin: 0;
-  overflow: hidden;
+  margin: 0
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: #451f5c;
   color: #fff6ed;
+}
+
+#content {
+  margin-top: 50px;
 }
 
 .heading {
