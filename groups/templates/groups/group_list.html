@@ -1,27 +1,26 @@
 {% extends "groups/group_base.html" %}
 {% block pregroup %}
-<div class="col-md-8">
-  <div class="content">
+  <div class="col-md-8">
+    <div class="content">
+      {% if user.is_authenticated %}
+        <br><h2>Welcome back
+          <a class="ref" href="{% url 'posts:for_user' username=user.username %}">
+            @{{user.username}}!
+          </a>
+        </h2>
+      {% endif %}
+      <br>
+      <h2>Groups</h2>
+      <p>Click to join and see the posts!</p>
+    </div>
     {% if user.is_authenticated %}
-      <br><h2>Welcome back
-        <a class="ref" href="{% url 'posts:for_user' username=user.username %}">
-          @{{user.username}}!
-        </a>
-      </h2>
+      <p class="description">Can't you see your game? No problem!</p>
+      <a href="{% url 'groups:create' %}" class="btn btn-dark btn-lg button">
+        <span class="fa fa-plus-circle"></span> Create a new group
+      </a>
     {% endif %}
-    <br>
-    <h2>Groups</h2>
-    <p>Click to join and see the posts!</p>
-    <p class="description">Can't you see your game? No problem!</p>
   </div>
-  {% if user.is_authenticated %}
-    <a href="{% url 'groups:create' %}" class="btn btn-dark btn-lg button">
-      <span class="fa fa-plus-circle"></span> Create a new group
-    </a>
-  {% endif %}
-</div>
 {% endblock %}
-
 
 {% block group_content %}
   <div class="col-md-8">
@@ -45,8 +44,9 @@
         </a>
       {% endfor %}
     </ul><br>
+    </div>
+    <!-- PAGINATION -->
     <div class="paginator">
-      <!-- PAGINATION -->
       {% if is_paginated %}
 
         {% if page_obj.has_previous %}
@@ -54,20 +54,20 @@
           <a class="btn btn-dark button" href="?page={{page_obj.previous_page_number}}">Previous</a>
         {% endif %}
 
-          {% for num in page_obj.paginator.page_range %}
-            {% if page_obj.number == num %}
-              <a class="btn btn-outline-light button" href="?page={{ num }}">{{ num }}</a>
-            {% elif num > page_obj.number|add:'-5' and num < page_obj.number|add:'5' %}
-              <a class="btn btn-dark button" href="?page={{ num }}">{{ num }}</a>
-            {% endif %}
-          {% endfor %}
-
-          {% if page_obj.has_next %}
-            <a class="btn btn-dark button" href="?page={{ page_obj.next_page_number }}">Next</a>
-            <a class="btn btn-dark button" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <a class="btn btn-outline-light button" href="?page={{ num }}">{{ num }}</a>
+          {% elif num > page_obj.number|add:'-5' and num < page_obj.number|add:'5' %}
+            <a class="btn btn-dark button" href="?page={{ num }}">{{ num }}</a>
           {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+          <a class="btn btn-dark button" href="?page={{ page_obj.next_page_number }}">Next</a>
+          <a class="btn btn-dark button" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
 
       {% endif %}
     </div>
-  </div>
+
 {% endblock %}
