@@ -3,7 +3,7 @@
 <div class="col-md-8">
   <div class="content">
     {% if user.is_authenticated %}
-      <br><h2>Welcome Back
+      <br><h2>Welcome back
         <a class="ref" href="{% url 'posts:for_user' username=user.username %}">
           @{{user.username}}!
         </a>
