@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #451f5c;
-  color: #fff6ed;
+  color: white;
 }
 
 #content {
@@ -53,4 +53,13 @@ body {
 
 .ref:hover {
   color: #ff7d00;
+}
+
+.description {
+  color: #ffc857;
+}
+
+.paginator {
+  text-align: center;
+  width: 150%;
 }

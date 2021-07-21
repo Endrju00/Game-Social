@@ -11,9 +11,11 @@
     {% if user in group.members.all %}
       <a href="{% url 'groups:leave' slug=group.slug %}" class="btn btn-dark btn-lg button">
         <span class="fa fa-sign-out"></span> Leave</a>
+        <a href="{% url 'posts:create' %}" class="btn btn-dark btn-lg button">
+          <span class='fa fa-gamepad'></span> Post</a>
     {% else %}
       <a href="{% url 'groups:join' slug=group.slug %}" class="btn btn-dark btn-lg button">
-        <span class='fa fa-gamepad'></span> Join</a>
+        <span class='fa fa-heart'></span> Join</a>
     {% endif %}
   </div>
   <p>Member Count: {{ group.members.count }}</p>

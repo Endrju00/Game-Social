@@ -26,6 +26,7 @@ class SingleGroup(generic.DetailView):
 
 class ListGroups(ListView):
     model = Group
+    paginate_by = 4
 
 
 class JoinGroup(LoginRequiredMixin, generic.RedirectView):
