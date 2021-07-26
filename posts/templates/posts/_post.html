@@ -19,7 +19,7 @@
 
         <span style="float: right;">
           {% if user.is_authenticated and post.user == user and not hide_delete %}
-            <a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn delete-button">
+            <a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn delete-button btn-sm">
               <span aria-hidden='true'></span>
               <span>Delete</span>
             </a>

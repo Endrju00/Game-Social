@@ -1,11 +1,92 @@
+:root {
+  --bg-color: #451f5c;
+  --primary-color: #573271;
+  --secondary-color: #49265d;
+  --badge-color: #451f5c;
+
+  --ref-color: #ffc857;
+  --ref-hover-color: #ff7d00;
+  --white-hover: #fff6ed;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #451f5c;
+  background-color: var(--bg-color);
   color: white;
   font-family: 'Roboto', sans-serif;
 }
+
+.heading {
+  text-align: center;
+}
+
+.button {
+  background-color: var(--primary-color);
+}
+
+.button:hover{
+  background-color: var(--secondary-color);
+  color: var(--white-hover);
+  border: 1px solid var(--secondary-color);
+}
+
+.delete-button{
+  background-color: var(--ref-color);
+  border: 1px solid var(--ref-hover-color);
+  color: black;
+}
+
+.delete-button:hover{
+  background-color: var(--ref-hover-color);
+  border: 1px solid var(--ref-color);
+  color: var(--white-hover);
+}
+
+/* GROUP PAGE */
+
+.list-group {
+  width: 150%;
+}
+
+.list-group-item {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.list-group-item:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-hover);
+}
+
+.badge-pill {
+  font-size: 13px;
+  margin-right: 5px;
+  background-color: var(--badge-color);
+  color: var(--ref-color);
+}
+
+.ref {
+  color: var(--ref-color);;
+}
+
+.ref:hover {
+  color: var(--ref-hover-color);
+}
+
+.description {
+  color: var(--ref-color);;
+}
+
+.paginator {
+  text-align: center;
+  width: 150%;
+}
+
+/* Background effect */
 
 #leftbox {
   margin-top: 50px;
@@ -26,72 +107,6 @@ body {
   height: 100%;
 }
 
-.heading {
-  text-align: center;
-}
-
-.button {
-  background-color: #573271;
-}
-
-.button:hover{
-  background-color: #49265d;
-  color: #fff6ed;
-  border: 1px solid #49265d;
-}
-
-.delete-button{
-  background-color: #ffc857;
-  border: 1px solid #ff7d00;
-  color: black;
-}
-
-.delete-button:hover{
-  background-color: #ff7d00;
-  border: 1px solid #ffc857;
-  color: white;
-}
-
-/* GROUP PAGE */
-
-.list-group {
-  width: 150%;
-}
-
-.list-group-item {
-  background-color: #573271;
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 5px;
-}
-
-.list-group-item:hover {
-  background-color: #49265d;
-  color: #fff6ed;
-}
-
-.badge-pill {
-  background-color: #451f5c;
-  color: white;
-}
-
-.ref {
-  color: #ffc857;
-}
-
-.ref:hover {
-  color: #ff7d00;
-}
-
-.description {
-  color: #ffc857;
-}
-
-.paginator {
-  text-align: center;
-  width: 150%;
-}
-
 /* SCROLLBAR */
 
 /* width */
@@ -101,18 +116,18 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px var(--ref-hover-color);
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ffc857;
+  background: var(--ref-color);;
   border-radius: 10px;
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff7d00;
+  background: var(--ref-hover-color);
 }
