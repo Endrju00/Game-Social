@@ -4,6 +4,7 @@ body {
   overflow-y: auto;
   background-color: #451f5c;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 #leftbox {
@@ -37,6 +38,18 @@ body {
   background-color: #49265d;
   color: #fff6ed;
   border: 1px solid #49265d;
+}
+
+.delete-button{
+  background-color: #ffc857;
+  border: 1px solid #ff7d00;
+  color: black;
+}
+
+.delete-button:hover{
+  background-color: #ff7d00;
+  border: 1px solid #ffc857;
+  color: white;
 }
 
 /* GROUP PAGE */
@@ -77,4 +90,29 @@ body {
 .paginator {
   text-align: center;
   width: 150%;
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffc857;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7d00;
 }
