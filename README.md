@@ -5,10 +5,10 @@ Available on https://game-social.herokuapp.com
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Installation](#installation)
-* [Screenshots](#screenshots)
+* [Deployment](#deployment)
 
 ## General info
-A social networking site that allows you to create a group and post in it.
+A social networking site connected with games that allows you to create groups and post in it.
 	
 ## Technologies
 Project is created with:
@@ -44,6 +44,8 @@ Project is created with:
     ```
 5) To check your application go to [localhost](http://127.0.0.1:5000/)
 
+## Deployment
+App is deployed on [Heroku](https://dashboard.heroku.com/) and available [here](https://game-social.herokuapp.com)
 <!-- ## Screenshots
 * **Home Page** 
 ![](additional/home.jpg)
