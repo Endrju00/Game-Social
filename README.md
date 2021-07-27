@@ -44,7 +44,7 @@ Project is created with:
     ```
 5) To check your application go to [localhost](http://127.0.0.1:5000/)
 
-## Screenshots
+<!-- ## Screenshots
 * **Home Page** 
 ![](additional/home.jpg)
 
@@ -57,4 +57,4 @@ Project is created with:
 ![](additional/post.jpg)
 
 * **Profile**
-![](additional/user.jpg)
+![](additional/user.jpg) -->
