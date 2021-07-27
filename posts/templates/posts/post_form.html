@@ -1,7 +1,7 @@
 {% extends "posts/posts_base.html" %}
 {% load crispy_forms_tags %}
 {% block post_content %}
-<div class="container">
+<div class="container create">
 
   <br><h3>Create a new post!</h3>
     <p><form action="{% url 'posts:create' %}" method="post" id="postForm">

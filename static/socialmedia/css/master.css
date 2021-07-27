@@ -31,7 +31,7 @@ input[type=text] {
    color: white;
 }
 
-input[type=text]:focus, #id_description {
+input[type=text]:focus, #id_description, #id_message, #id_group {
    background-color: var(--primary-color);
    border: 1px solid var(--secondary-color);
    color: white;
@@ -123,6 +123,10 @@ span.wave{
   margin-right: 5px;
   background-color: var(--badge-color);
   color: var(--ref-color);
+}
+
+.create {
+  margin-top: 120px;
 }
 
 .ref {
