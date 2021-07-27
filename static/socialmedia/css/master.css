@@ -18,6 +18,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#warning {
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  text-align: center;
+}
+
 .deals {
   margin-top: 100px;
 }

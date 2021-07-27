@@ -82,9 +82,13 @@
     </div>
 
     {% if not user.is_authenticated %}
-    <div class="container" style="margin-left: 32%;">
-      <h5 class="description" style="position: fixed; bottom: 20px;">
-        Please Log In or Create an Account to see the full functionality of the website!
+    <div id="warning">
+      <h5 class="description" style="">
+        Please
+        <a class="ref" href="{% url 'accounts:login' %}" style="text-decoration: underline;" >Log In</a>
+          or
+        <a class="ref" href="{% url 'accounts:signup' %}" style="text-decoration: underline;">Create an Account</a>
+          to see the full functionality of the website!
       </h5>
     </div>
     {% endif %}
