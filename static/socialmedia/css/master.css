@@ -18,6 +18,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.deals {
+  margin-top: 100px;
+}
+
+
+/* Fade effect */
 .heading {
   margin-top: 10%;
   font-weight: bold;
@@ -26,13 +32,14 @@ body {
 }
 
 span.text {
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 span.wave{
   color: white;
 }
 
+/* buttons */
 .button {
   background-color: var(--primary-color);
 }
@@ -89,7 +96,7 @@ span.wave{
 }
 
 .description {
-  color: var(--ref-color);;
+  color: var(--ref-color);
 }
 
 .paginator {

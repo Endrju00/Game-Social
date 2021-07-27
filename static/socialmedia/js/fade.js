@@ -7,12 +7,24 @@ for (let i=0; i<splitText.length; i++) {
   text.innerHTML += "<span class=\"text\">" + splitText[i] + "</span>";
 }
 
-let char = 0;
-let timer = setInterval(onTick, 50);
+var timer;
+var char = 0;
+
+fade();
+let timer2 = setInterval(fade, 5000);
+
+function fade() {
+  timer = setInterval(onTick, 50);
+
+}
 
 function onTick() {
   const span = text.querySelectorAll('span')[char];
-  span.classList.add('wave');
+  if(span.classList.contains('wave')) {
+    span.classList.remove('wave');
+  } else {
+    span.classList.add('wave');
+  }
   char++;
 
   if(char == splitText.length){
@@ -24,4 +36,5 @@ function onTick() {
 function complete() {
   clearInterval(timer);
   timer = null;
+  char = 0;
 }

@@ -81,6 +81,14 @@
       {% endblock %}
     </div>
 
+    {% if not user.is_authenticated %}
+    <div class="container" style="margin-left: 32%;">
+      <h5 class="description" style="position: fixed; bottom: 20px;">
+        Please Log In or Create an Account to see the full functionality of the website!
+      </h5>
+    </div>
+    {% endif %}
+
     <script src="{% static 'socialmedia/js/master.js' type="text/javascript" %}">
     </script>
     <script src="{% static 'socialmedia/js/fade.js' type="text/javascript" %}">
