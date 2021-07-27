@@ -19,7 +19,18 @@ body {
 }
 
 .heading {
+  margin-top: 10%;
+  font-weight: bold;
   text-align: center;
+  color: var(--ref-color);
+}
+
+span.text {
+  transition: all 0.2s ease;
+}
+
+span.wave{
+  color: white;
 }
 
 .button {
