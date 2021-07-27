@@ -11,11 +11,10 @@ var timer;
 var char = 0;
 
 fade();
-let timer2 = setInterval(fade, 5000);
+let timer2 = setInterval(fade, 2000);
 
 function fade() {
   timer = setInterval(onTick, 50);
-
 }
 
 function onTick() {

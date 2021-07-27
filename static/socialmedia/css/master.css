@@ -27,8 +27,30 @@ body {
 
 .deals {
   margin-top: 100px;
+  text-align: center;
 }
 
+.rounded-pill{
+  margin-top: 20px;
+  border-radius: 15%;
+  margin-right: 15px;
+  box-shadow: 2px 2px 5px #303030;
+
+}
+
+.rounded-pill:hover{
+  margin-top: 10px;
+  box-shadow: 3px 4px 5px goldenrod;
+}
+
+.slider:hover{
+  margin-top: 20px;
+  /* animation: slide 1s linear; */
+}
+
+/* @keyframes slide{
+  0% {margin-top: 0px}
+} */
 
 /* Fade effect */
 .heading {
@@ -107,6 +129,7 @@ span.wave{
 }
 
 .paginator {
+  margin-bottom: 70px;
   text-align: center;
   width: 150%;
 }
@@ -117,7 +140,7 @@ span.wave{
   margin-top: 50px;
   float: left;
   width: 25%;
-  height: 1px;
+  height: 100%;
 }
 
 #canvas {

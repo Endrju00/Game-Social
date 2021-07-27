@@ -1,10 +1,28 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
   <br><h1 class="heading">Welcome to Game Social!</h1>
   <p class="description" style="text-align: center;">Click on the background!</p>
 
+
   <div class="deals">
-    
+    <br><h2>Need some games?</h2>
+
+      <a href="https://store.steampowered.com/">
+        <img src="{% static 'socialmedia/images/steam.png' %}" class="rounded-pill">
+      </a>
+
+    <a href="https://www.epicgames.com/store/">
+      <img src="{% static 'socialmedia/images/epic.png' %}" class="rounded-pill">
+    </a>
+
+    <a href="https://store.ubi.com/">
+      <img src="{% static 'socialmedia/images/ubi.png' %}" class="rounded-pill">
+    </a>
+
+    <a href="https://www.gog.com/games/">
+      <img src="{% static 'socialmedia/images/gog.png' %}" class="rounded-pill">
+    </a>
+
   </div>
 {% endblock %}
